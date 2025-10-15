@@ -13,16 +13,6 @@ system.mem_ranges = [AddrRange('512MB')]
 # Create the 5-stage in-order CPU using MinorCPU
 system.cpu = O3CPU()
 
-# Configure it to be “superscalar” by increasing widths
-system.cpu.fetchWidth = 4
-system.cpu.decodeWidth = 4
-system.cpu.renameWidth = 4
-system.cpu.dispatchWidth = 4
-system.cpu.issueWidth = 4
-system.cpu.wbWidth = 4
-system.cpu.commitWidth = 4
-system.cpu.squashWidth = 4
-
 # Create a memory bus
 system.membus = SystemXBar()
 system.system_port = system.membus.cpu_side_ports
