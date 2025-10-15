@@ -17,7 +17,7 @@ system.mem_ranges = [AddrRange('512MB')]  # Address range for memory
 # Create CPU
 system.cpu = O3CPU()
 
-# Configure it to be “superscalar” by increasing widths
+# Configure it to be superscalar by increasing widths
 system.cpu.fetchWidth = 4
 system.cpu.decodeWidth = 4
 system.cpu.renameWidth = 4
