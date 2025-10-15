@@ -46,10 +46,11 @@ system.mem_ctrl.port = system.membus.mem_side_ports
 
 # Setup workload - statically linked binary
 system.workload = SEWorkload.init_compatible('./intBench')
+
+# Create two separate processes
 process1 = Process()
 process1.cmd = ['./intBench']
 
-system.workload = SEWorkload.init_compatible('./floatBench')
 process2 = Process()
 process2.cmd = ['./floatBench']
 
